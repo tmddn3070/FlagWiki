@@ -20,7 +20,7 @@ def main_update_2(conn, r_ver):
             ok = []
 
             ok += [os.system('git remote rm origin')]
-            ok += [os.system('git remote add origin https://github.com/opennamu/opennamu.git')]
+            ok += [os.system('git remote add origin https://github.com/FlagPvP/FlagWiki.git')]
             ok += [os.system('git fetch origin ' + up_data)]
             ok += [os.system('git reset --hard origin/' + up_data)]
             if (ok[0] and ok[1] and ok[2] and ok[3]) == 0:
@@ -29,7 +29,7 @@ def main_update_2(conn, r_ver):
                 print('Error : update failed')
         elif platform.system() == 'Windows':
             os.system('rd /s /q route')
-            urllib.request.urlretrieve('https://github.com/opennamu/opennamu/archive/' + up_data + '.zip', 'update.zip')
+            urllib.request.urlretrieve('https://github.com/FlagPvP/FlagWiki/archive/' + up_data + '.zip', 'update.zip')
             zipfile.ZipFile('update.zip').extractall('')
             ok = os.system('xcopy /y /s /r opennamu-' + up_data + ' .')
             if ok == 0:
@@ -50,7 +50,7 @@ def main_update_2(conn, r_ver):
                     <li>''' + load_lang('version') + ' : ' + r_ver + '''</li>
                     <li id="ver_send" style="display: none;">''' + load_lang('lastest') + ''' : </li>
                 </ul>
-                <a href="https://github.com/openNAMU/openNAMU">(Beta)</a> <a href="https://github.com/openNAMU/openNAMU/tree/stable">(Stable)</a>
+                <a href="https://github.com/FlagPvP/FlagWiki">(Dev)</a>
                 <hr class=\"main_hr\">
                 <form method="post">
                     <button type="submit">''' + load_lang('update') + '''</button>
