@@ -29,15 +29,16 @@ def login_login_2(conn):
         else:
             for i in sql_data:
                 user_data[i[0]] = i[1]
-
-        if pw_check(
-            flask.request.form.get('pw', ''),
-            user_data['pw'],
-            user_data['encode'],
-            user_id
-        ) != 1:
-            return re_error('/error/10')
-
+        try:
+            if pw_check(
+                flask.request.form.get('pw', ''),
+                user_data['pw'],
+                user_data['encode'],
+                user_id
+            ) != 1:
+                return re_error('/error/10')
+        except KeyError:
+                return re_error('/error/10')
         curs.execute(db_change('select data from user_set where name = "2fa" and id = ?'), [user_id])
         fa_data = curs.fetchall()
         if fa_data and fa_data[0][0] != '':
