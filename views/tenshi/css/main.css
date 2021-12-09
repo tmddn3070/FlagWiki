@@ -259,7 +259,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #pre_search a {
-    color: dodgerblue;
+    color: #eb2a3a;
 }
 
 #search button {
@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* content */
 a {
-    color: dodgerblue;
+    color: #eb2a3a;
 }
 
 #toc {
