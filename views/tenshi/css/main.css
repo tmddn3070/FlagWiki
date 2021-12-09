@@ -172,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .top_in_cel:hover {
-    background: #022988;
+    background: eb2a3a;
     
     transition: .2s ease-in-out;
 }
@@ -275,7 +275,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* content */
 a {
-    color: #eb2a3a;
+    color: dodgerblue;
 }
 
 #toc {
