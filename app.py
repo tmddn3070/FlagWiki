@@ -25,16 +25,16 @@ if os.path.exists(os.path.join('data', 'set.json')):
 
     print('DB name : ' + set_data['db'])
     print('DB type : ' + set_data['db_type'])
-elif os.getenv('NAMU_DB') or os.getenv('NAMU_DB_TYPE'):
+elif os.getenv('FLAG_DB') or os.getenv('FLAG_DB_TYPE'):
     set_data = {}
 
-    if os.getenv('NAMU_DB'):
-        set_data['db'] = os.getenv('NAMU_DB')
+    if os.getenv('FLAG_DB'):
+        set_data['db'] = os.getenv('_DB')
     else:
         set_data['db'] = 'data'
 
-    if os.getenv('NAMU_DB_TYPE'):
-        set_data['db'] = os.getenv('NAMU_DB_TYPE')
+    if os.getenv('FLAG_DB_TYPE'):
+        set_data['db'] = os.getenv('FLAG_DB_TYPE')
     else:
         set_data['db'] = 'sqlite'
 
@@ -258,11 +258,11 @@ server_set_var = {
     }
 }
 server_set_env = {
-    'host' : os.getenv('NAMU_HOST'),
-    'port' : os.getenv('NAMU_PORT'),
-    'language' : os.getenv('NAMU_LANG'),
-    'markup' : os.getenv('NAMU_MARKUP'),
-    'encode' : os.getenv('NAMU_ENCRYPT')
+    'host' : os.getenv('FLAG_HOST'),
+    'port' : os.getenv('FLAG_PORT'),
+    'language' : os.getenv('FLAG_LANG'),
+    'markup' : os.getenv('FLAG_MARKUP'),
+    'encode' : os.getenv('FLAG_ENCRYPT')
 }
 for i in server_set_var:
     curs.execute(db_change('select data from other where name = ?'), [i])
