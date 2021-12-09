@@ -7,7 +7,7 @@ def login_register_email_2(conn):
         return redirect('/register')
     
     if flask.request.method == 'POST':
-        flask.session['reg_key'] = load_random_key(32)
+        flask.session['reg_key'] = load_random_key(6)
 
         user_email = flask.request.form.get('email', '')
         email_data = re.search(r'@([^@]+)$', user_email)
@@ -26,14 +26,8 @@ def login_register_email_2(conn):
             t_text = html.escape(sql_d[0][0])
         else:
             t_text = wiki_set()[0] + ' key'
-
-        curs.execute(db_change('select data from other where name = "email_text"'))
-        sql_d = curs.fetchall()
-        if sql_d and sql_d[0][0] != '':
-            i_text = html.escape(sql_d[0][0]) + '\n\nKey : ' + str(flask.session.get('reg_key'))
-        else:
-            i_text = 'Key : ' + str(flask.session.get('reg_key'))
-        
+        i_text = 'FlagWiki에 가입해주셔서 감사해요.\n인증코드는 ' + str(flask.session.get('reg_key')+' 에요.\n만약 가입하지않았다면 잘못온걸수도있으니 무시해주세요!')
+    
 
         curs.execute(db_change('select id from user_set where name = "email" and data = ?'), [user_email])
         if curs.fetchall():

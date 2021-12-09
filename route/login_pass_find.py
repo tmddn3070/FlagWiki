@@ -8,14 +8,14 @@ def login_pass_find_2(conn, tool):
         re_set_list = ['c_id', 'c_pw', 'c_ans', 'c_que', 'c_key', 'c_type']
     
         if tool == 'email_change':
-            flask.session['c_key'] = load_random_key(32)
+            flask.session['c_key'] = load_random_key(6)
             flask.session['c_id'] = ip_check()
             flask.session['c_type'] = 'email_change'
         elif tool == 'pass_find':
             user_id = flask.request.form.get('id', '')
             user_email = flask.request.form.get('email', '')
 
-            flask.session['c_key'] = load_random_key(32)
+            flask.session['c_key'] = load_random_key(6)
             flask.session['c_id'] = user_id
             flask.session['c_type'] = 'pass_find'
         else:

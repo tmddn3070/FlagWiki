@@ -6,7 +6,7 @@ def user_setting_email_2(conn):
     if flask.request.method == 'POST':
         # c_key 같은 이름 대신 한 기능에 고유 명칭 부여 필요
         re_set_list = ['c_key']
-        flask.session['c_key'] = load_random_key(32)
+        flask.session['c_key'] = load_random_key(6)
 
         user_email = flask.request.form.get('email', '')
         email_data = re.search(r'@([^@]+)$', user_email)

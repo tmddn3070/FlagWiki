@@ -416,17 +416,17 @@ def load_image_url():
     return image_where
 
 def http_warning():
-    #return '''
-    #    <div id="http_warning_text"></div>
-    #    <script>
-    #        if(window.location.protocol !== 'https:') {
-    #            document.getElementById('http_warning_text').innerHTML = "''' + \
-    #                load_lang('http_warning') + \
-    #            '''";
-    #            document.getElementById('http_warning_text').style.margin = "10px 0px 0px 0px";
-    #       }
-    #    </script>
-    #'''
+    return '''
+        <div id="http_warning_text"></div>
+        <script>
+            if(window.location.protocol !== 'https:') {
+                document.getElementById('http_warning_text').innerHTML = "''' + \
+                    load_lang('http_warning') + \
+                '''";
+                document.getElementById('http_warning_text').style.margin = "10px 0px 0px 0px";
+           }
+        </script>
+    '''
     return
 def load_domain():
     curs.execute(db_change("select data from other where name = 'domain'"))
@@ -438,7 +438,7 @@ def load_domain():
 def load_random_key(long = 64):
     return ''.join(
         random.choice(
-            "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            "0123456789"
         ) for i in range(long)
     )
 
@@ -904,10 +904,10 @@ def send_email(who, title, data):
         
         msg = email.mime.text.MIMEText(data)
         msg['Subject'] = title
-        msg['From'] = 'openNAMU <noreply@' + domain + '>'
+        msg['From'] = 'FlagWiki <noreply@' + domain + '>'
         msg['To'] = who
         
-        smtp.sendmail('openNAMU@' + domain, who, msg.as_string())
+        smtp.sendmail('FlagWiki@' + domain, who, msg.as_string())
         smtp.quit()
 
         return 1
