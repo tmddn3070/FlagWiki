@@ -416,18 +416,18 @@ def load_image_url():
     return image_where
 
 def http_warning():
-    return '''
-        <div id="http_warning_text"></div>
-        <script>
-            if(window.location.protocol !== 'https:') {
-                document.getElementById('http_warning_text').innerHTML = "''' + \
-                    load_lang('http_warning') + \
-                '''";
-                document.getElementById('http_warning_text').style.margin = "10px 0px 0px 0px";
-            }
-        </script>
-    '''
-
+    #return '''
+    #    <div id="http_warning_text"></div>
+    #    <script>
+    #        if(window.location.protocol !== 'https:') {
+    #            document.getElementById('http_warning_text').innerHTML = "''' + \
+    #                load_lang('http_warning') + \
+    #            '''";
+    #            document.getElementById('http_warning_text').style.margin = "10px 0px 0px 0px";
+    #       }
+    #    </script>
+    #'''
+    return
 def load_domain():
     curs.execute(db_change("select data from other where name = 'domain'"))
     domain = curs.fetchall()
