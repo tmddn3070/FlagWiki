@@ -24,16 +24,16 @@ if data_db_load == 'Y':
 
         print('DB name : ' + set_data['db'])
         print('DB type : ' + set_data['db_type'])
-    elif os.getenv('NAMU_DB') or os.getenv('NAMU_DB_TYPE'):
+    elif os.getenv('NAMU_DB') or os.getenv('FLAG_DB_TYPE'):
         set_data = {}
 
-        if os.getenv('NAMU_DB'):
-            set_data['db'] = os.getenv('NAMU_DB')
+        if os.getenv('FLAG_DB'):
+            set_data['db'] = os.getenv('FLAG_DB')
         else:
             set_data['db'] = 'data'
 
         if os.getenv('NAMU_DB_TYPE'):
-            set_data['db'] = os.getenv('NAMU_DB_TYPE')
+            set_data['db'] = os.getenv('FLAG_DB_TYPE')
         else:
             set_data['db'] = 'sqlite'
 
