@@ -154,7 +154,7 @@ function do_onmark_heading_render(data, data_js, name_doc, name_include) {
         }
         
         if(toc_data === '') {
-            toc_data += '<div id="toc"><div id="toc_title">목차/div>\n';
+            toc_data += '<div id="toc"><div id="toc_title">목차</div>\n';
         }
           
         var heading_level = heading_data[1].length;
