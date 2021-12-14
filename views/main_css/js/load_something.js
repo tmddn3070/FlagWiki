@@ -93,7 +93,7 @@ function simple_render(name_ele) {
     var skin_set_data = document.getElementById(name_ele).innerHTML;
     
     // 목차 구현
-    var toc_all_data = '<div id="toc"><span id="toc_title">TOC</span><br>';
+    var toc_all_data = '<div id="toc"><span id="toc_title">목차</span><br>';
     var split_toc;
     var toc_data;
     i = 1;
