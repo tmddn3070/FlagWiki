@@ -460,10 +460,10 @@ div#last_edit {
 }
 
 blockquote {
-    background-color: #ffefff;
+    background-color: #eee;
 
     padding: 15px 40px 15px 15px;
-    border-left: 4px solid #ffb3ff;
+    border-left: 4px solid #ff9900;
     
     margin-bottom: 20px;
 }
