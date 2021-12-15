@@ -1657,7 +1657,7 @@ def re_error(data):
         elif num == 33:
             data = load_lang('restart_fail_error')
         elif num == 34:
-            data = load_lang("update_error") + ' <a href="https://github.com/opennamu/opennamu">(Github)</a>'
+            data = load_lang("update_error") + ' <a href="https://github.com/FlagPvP/FlagWiki">(Github)</a>'
         elif num == 35:
             data = load_lang('same_email_error')
         elif num == 36:
