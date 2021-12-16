@@ -1043,7 +1043,7 @@ def admin_check(num = None, what = None, name = ''):
 
     return 0
 
-def acl_check(name = 'test', tool = '', topic_num = '1'):
+def acl_check(name = 'flag', tool = '', topic_num = '1'):
     ip = ip_check()
     get_ban = ban_check()
     acl_c = re.search(r"^user:((?:(?!\/).)*)", name) if name else None

@@ -363,7 +363,7 @@ def inter_wiki():
     return inter_wiki_2(conn, 'inter_wiki')
 
 @app.route('/inter_wiki/del/<name>')
-def inter_wiki_del(name = 'Test'):
+def inter_wiki_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_inter_wiki', name)
 
 @app.route('/edit_top')
@@ -371,7 +371,7 @@ def inter_wiki_edit_top():
     return inter_wiki_2(conn, 'edit_top')
 
 @app.route('/edit_top/del/<name>')
-def inter_wiki_edit_top_del(name = 'Test'):
+def inter_wiki_edit_top_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_edit_top', name)
 
 @app.route('/image_license')
@@ -379,7 +379,7 @@ def inter_wiki_image_license():
     return inter_wiki_2(conn, 'image_license')
 
 @app.route('/image_license/del/<name>')
-def inter_wiki_image_license_del(name = 'Test'):
+def inter_wiki_image_license_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_image_license', name)
 
 @app.route('/edit_filter')
@@ -387,7 +387,7 @@ def inter_wiki_edit_filter():
     return inter_wiki_2(conn, 'edit_filter')
 
 @app.route('/edit_filter/del/<name>')
-def inter_wiki_edit_filter_del(name = 'Test'):
+def inter_wiki_edit_filter_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_edit_filter', name)
 
 @app.route('/email_filter')
@@ -395,7 +395,7 @@ def inter_wiki_email_filter():
     return inter_wiki_2(conn, 'email_filter')
 
 @app.route('/email_filter/del/<name>')
-def inter_wiki_email_filter_del(name = 'Test'):
+def inter_wiki_email_filter_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_email_filter', name)
 
 @app.route('/file_filter')
@@ -403,7 +403,7 @@ def inter_wiki_file_filter():
     return inter_wiki_2(conn, 'file_filter')
 
 @app.route('/file_filter/del/<name>')
-def inter_wiki_file_filter_del(name = 'Test'):
+def inter_wiki_file_filter_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_file_filter', name)
 
 @app.route('/name_filter')
@@ -411,7 +411,7 @@ def inter_wiki_name_filter():
     return inter_wiki_2(conn, 'name_filter')
 
 @app.route('/name_filter/del/<name>')
-def inter_wiki_name_filter_del(name = 'Test'):
+def inter_wiki_name_filter_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_name_filter', name)
 
 @app.route('/extension_filter')
@@ -419,7 +419,7 @@ def inter_wiki_extension_filter():
     return inter_wiki_2(conn, 'extension_filter')
 
 @app.route('/extension_filter/del/<name>')
-def inter_wiki_extension_filter_del(name = 'Test'):
+def inter_wiki_extension_filter_del(name = 'Flag'):
     return inter_wiki_del_2(conn, 'del_extension_filter', name)
 
 @app.route('/<regex("(?:inter_wiki|edit_top|image_license|(?:edit|email|file|name|extension)_filter)"):tools>/add', methods = ['POST', 'GET'])
@@ -533,7 +533,7 @@ def give_delete_admin_group(name = None):
 @app.route('/block_log')
 @app.route('/block_log/<regex("user"):tool>/<name>')
 @app.route('/block_log/<regex("admin"):tool>/<name>')
-def recent_block(name = 'Test', tool = 'all'):
+def recent_block(name = 'Flag', tool = 'all'):
     return recent_block_2(conn, name, tool)
 
 # Func-history
@@ -551,35 +551,35 @@ def recent_history(name = None):
     return recent_change_2(conn, name, 'history')
 
 @app.route('/history/tool/<int(signed=True):rev>/<everything:name>')
-def recent_history_tool(name = 'Test', rev = 1):
+def recent_history_tool(name = 'Flag', rev = 1):
     return recent_history_tool_2(conn, name, rev)
 
 @app.route('/history/delete/<int(signed=True):rev>/<everything:name>', methods = ['POST', 'GET'])
-def recent_history_delete(name = 'Test', rev = 1):
+def recent_history_delete(name = 'Flag', rev = 1):
     return recent_history_delete_2(conn, name, rev)
 
 @app.route('/history/hidden/<int(signed=True):rev>/<everything:name>')
-def recent_history_hidden(name = 'Test', rev = 1):
+def recent_history_hidden(name = 'Flag', rev = 1):
     return recent_history_hidden_2(conn, name, rev)
 
 @app.route('/history/send/<int(signed=True):rev>/<everything:name>', methods = ['POST', 'GET'])
-def recent_history_send(name = 'Test', rev = 1):
+def recent_history_send(name = 'Flag', rev = 1):
     return recent_history_send_2(conn, name, rev)
 
 @app.route('/history/reset/<everything:name>', methods = ['POST', 'GET'])
-def recent_history_reset(name = 'Test'):
+def recent_history_reset(name = 'Flag'):
     return recent_history_reset_2(conn, name)
 
 @app.route('/history/add/<everything:name>', methods = ['POST', 'GET'])
-def recent_history_add(name = 'Test'):
+def recent_history_add(name = 'Flag'):
     return recent_history_add_2(conn, name)
 
 @app.route('/record/reset/<name>', methods = ['POST', 'GET'])
-def recent_record_reset(name = 'Test'):
+def recent_record_reset(name = 'Flag'):
     return recent_record_reset_2(conn, name)
 
 @app.route('/record/topic/<name>')
-def recent_record_topic(name = 'Test'):
+def recent_record_topic(name = 'Flag'):
     return recent_record_topic_2(conn, name)
 
 # 거처를 고심중
@@ -594,20 +594,20 @@ def search():
 
 @app.route('/goto', methods=['POST'])
 @app.route('/goto/<everything:name>', methods=['POST'])
-def search_goto(name = 'test'):
+def search_goto(name = 'flag'):
     return search_goto_2(conn, name)
 
 @app.route('/search/<everything:name>')
-def search_deep(name = 'test'):
+def search_deep(name = 'flag'):
     return search_deep_2(conn, name)
 
 # Func-view
 @app.route('/xref/<everything:name>')
-def view_xref(name = 'Test'):
+def view_xref(name = 'Flag'):
     return view_xref_2(conn, name)
 
 @app.route('/xref/this/<everything:name>')
-def view_xref_this(name = 'Test'):
+def view_xref_this(name = 'Flag'):
     return view_xref_2(conn, name, xref_type = '2')
 
 @app.route('/raw/<everything:name>')
@@ -616,7 +616,7 @@ def view_raw(name = None, topic_num = None, num = None):
     return view_raw_2(conn, name, topic_num, num)
 
 @app.route('/diff/<int:num_a>/<int:num_b>/<everything:name>')
-def view_diff(name = 'Test', num_a = 1, num_b = 1):
+def view_diff(name = 'Flag', num_a = 1, num_b = 1):
     return view_diff_2(conn, name, num_a, num_b)
 
 @app.route('/down/<everything:name>')
@@ -626,7 +626,7 @@ def view_down(name = None):
 @app.route('/w/<everything:name>/doc_rev/<int:doc_rev>')
 @app.route('/w/<everything:name>/doc_from/<everything:doc_from>')
 @app.route('/w/<everything:name>')
-def view_read(name = 'Test', doc_rev = 0, doc_from = ''):
+def view_read(name = 'Flag', doc_rev = 0, doc_from = ''):
     return view_read_2(conn, name, doc_rev, doc_from)
 
 # Func-edit
@@ -636,11 +636,11 @@ def edit_revert(name = None):
 
 @app.route('/edit/<everything:name>', methods = ['POST', 'GET'])
 @app.route('/edit/<everything:name>/doc_section/<int:section>', methods = ['POST', 'GET'])
-def edit(name = 'Test', section = 0):
+def edit(name = 'Flag', section = 0):
     return edit_2(conn, name, section)
 
 @app.route('/backlink_reset/<everything:name>')
-def edit_backlink_reset(name = 'Test'):
+def edit_backlink_reset(name = 'Flag'):
     return edit_backlink_reset_2(conn, name)
 
 @app.route('/delete/<everything:name>', methods = ['POST', 'GET'])
@@ -648,7 +648,7 @@ def edit_delete(name = None):
     return edit_delete_2(conn, name)
 
 @app.route('/delete/doc_file/<everything:name>', methods = ['POST', 'GET'])
-def edit_delete_file(name = 'test.jpg'):
+def edit_delete_file(name = 'flag.jpg'):
     return edit_delete_file_2(conn, name)
 
 @app.route('/delete/doc_mutiple', methods = ['POST', 'GET'])
@@ -701,7 +701,7 @@ def topic(topic_num = 1):
     return topic_2(conn, topic_num)
 
 @app.route('/topic/<everything:name>', methods = ['POST', 'GET'])
-def topic_close_list(name = 'test'):
+def topic_close_list(name = 'flag'):
     return topic_close_list_2(conn, name)
 
 # Func-user
@@ -748,7 +748,7 @@ def user_watch_list():
     return user_watch_list_2(conn, 'watch_list')
 
 @app.route('/watch_list/<everything:name>')
-def user_watch_list_name(name = 'Test'):
+def user_watch_list_name(name = 'Flag'):
     return user_watch_list_name_2(conn, 'watch_list', name)
 
 @app.route('/star_doc')
@@ -756,7 +756,7 @@ def user_star_doc():
     return user_watch_list_2(conn, 'star_doc')
 
 @app.route('/star_doc/<everything:name>')
-def user_star_doc_name(name = 'Test'):
+def user_star_doc_name(name = 'Flag'):
     return user_watch_list_name_2(conn, 'star_doc', name)
 
 # Func-login
@@ -891,7 +891,7 @@ def api_recent_discuss_all(num = 10):
     return api_recent_discuss_2(conn, num, 'all')
 
 @app.route('/api/sha224/<everything:name>', methods = ['POST', 'GET'])
-def api_sha224(name = 'test'):
+def api_sha224(name = 'flag'):
     return api_sha224_2(conn, name)
 
 @app.route('/api/title_index')
