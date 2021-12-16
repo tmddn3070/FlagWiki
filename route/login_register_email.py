@@ -25,8 +25,8 @@ def login_register_email_2(conn):
         if sql_d and sql_d[0][0] != '':
             t_text = html.escape(sql_d[0][0])
         else:
-            t_text = wiki_set()[0] + ' key'
-        i_text = 'FlagWiki에 가입해주셔서 감사해요.\n인증코드는 ' + str(flask.session.get('reg_key')+' 에요.\n만약 가입하지않았다면 잘못온걸수도있으니 무시해주세요!')
+            t_text = wiki_set()[0] + ' 인증코드'
+        i_text = '[ 한마위 ]\n한마위에 가입해주셔서 감사해요.\n인증코드는 ' + str(flask.session.get('reg_key')+' 에요.\n만약 가입하지않았다면 잘못온걸수도있으니 무시해주세요!')
     
 
         curs.execute(db_change('select id from user_set where name = "email" and data = ?'), [user_email])
