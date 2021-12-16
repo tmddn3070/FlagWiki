@@ -157,7 +157,7 @@ def view_read_2(conn, name, doc_rev, doc_from):
             menu += [['w/' + url_pas(name), load_lang('pass')]]
             end_data = '''
                 <div id="redirect">
-                    <a href="/w/''' + url_pas(name_doc_pass) + '/doc_from/' + url_pas(name) + '">' + name_doc_pass + '</a> ⇨ <b>' + name + '''</b>
+                    <a href="/w/''' + url_pas(name_doc_pass) + '/doc_from/' + url_pas(name) + '">' + name_doc_pass + '</a>에서 넘어옴<b>''''</b>
                 </div>
                 <br>
             ''' + end_data
