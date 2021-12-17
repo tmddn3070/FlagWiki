@@ -407,5 +407,7 @@
     "email_setting": "이메일 설정",
     "oauth_client_id": "OAuth 클라이언트 ID",
     "today_doc" : "오늘의 문서",
-    "send_edit" : "편집 사유 수정"
+    "send_edit" : "편집 사유 수정",
+    "START_NEW_ENGINE": "이 아래부터는 몰루엔진이 추가,수정한 내용입니다.",
+    "file_delete": "파일 삭제"
 }
