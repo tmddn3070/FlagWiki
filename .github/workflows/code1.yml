@@ -24,3 +24,4 @@ jobs:
       with:
         token: 60a4da1a-3475-4548-b1f8-658c959a8517
         directory: ./coverage/reports/
+        working-directory: ./
