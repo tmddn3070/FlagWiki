@@ -17,9 +17,8 @@ jobs:
         python-version: 3.8
     - name: Generate Report
       run: |
-        pip install pytest
-        pip install pytest-cov
-        pytest --cov=./ --cov-report=xml
+        pip install coverage
+        coverage run -m unittest app.py
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2.1.0
       with:
