@@ -25,11 +25,5 @@ jobs:
       uses: codecov/codecov-action@v2
       with:
         token: 60a4da1a-3475-4548-b1f8-658c959a8517
-        directory: .github/codecov/
-        env_vars: OS,PYTHON
-        fail_ci_if_error: true
-        files: .github/codecov/coverage2.xml,.github/codecov/coverage2.xml
-        flags: unittests
-        name: codecov-umbrella
-        path_to_write_report: .github/codecov/codecov_report.txt
-        verbose: true
+        directory: ./codecov
+        path_to_write_report: ./codecov/codecov.txt
