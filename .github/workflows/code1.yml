@@ -21,3 +21,5 @@ jobs:
         coverage run -m unittest
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v2.1.0
+      with:
+        token: 60a4da1a-3475-4548-b1f8-658c959a8517
