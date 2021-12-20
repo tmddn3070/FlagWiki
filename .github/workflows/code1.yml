@@ -23,4 +23,4 @@ jobs:
       uses: codecov/codecov-action@v2.1.0
       with:
         token: 60a4da1a-3475-4548-b1f8-658c959a8517
-        directory: /coverage/reports/
+        directory: ./coverage/reports/codecov.xml
