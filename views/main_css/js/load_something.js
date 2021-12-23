@@ -22,7 +22,7 @@ function load_ver() {
             let get_data = JSON.parse(this.responseText);
             document.getElementById('ver_send_2').innerHTML = get_data['version'];
             
-            let url_2 = 'https://raw.githubusercontent.com/openNAMU/openNAMU/' + get_data['build'] + '/version.json';
+            let url_2 = 'https://raw.githubusercontent.com/FlagPvP/FlagWiki/' + get_data['build'] + '/version.json';
             var xhr_2 = new XMLHttpRequest();
             xhr_2.open("GET", url_2, true);
             xhr_2.send();
