@@ -721,10 +721,6 @@ def user_setting_email_check():
 def user_setting_pw_change():
     return user_setting_pw_change_2(conn)
 
-@app.route('/change/head', methods=['GET', 'POST'])
-def user_setting_head():
-    return user_setting_head_2(conn)
-
 @app.route('/user')
 @app.route('/user/<name>')
 def user_info(name = ''):
