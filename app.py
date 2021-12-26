@@ -970,6 +970,10 @@ def main_file(data = ''):
 @app.errorhandler(404)
 def main_error_404(e):
     return main_error_404_2(conn)
+
+@app.route('/license')
+def main_license():
+    return main_license_2(conn)
 	
 if __name__ == "__main__":
     WSGIServer((
