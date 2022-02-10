@@ -2,7 +2,7 @@
 [![Python 3.6 이상](https://img.shields.io/badge/python->=%203.6-blue.svg)](https://python.org)
 [![라이선스](https://img.shields.io/badge/license-BSD%203--Clause-lightgrey.svg)](./LICENSE)
 
-![](https://w.namu.la/s/d85d3c39fd3b225bc05fd8d64fb4f334200644f7154148283e6dc731e25f9ac20a52aafd3de51e7e88dcb35cf7582cfcea9c9b65e530ec41178ea063f131fcc791dbd777745320848d2697e2041ecbd118dab5f5807c3d72472eb2a7eddb9aae)
+![](https://w.namu.la/s/d85d3c39fd3b225bc05fd8d64fb4f334200644f7154148283e6dc731e25f9ac20a52aafd3de51e7e88dcb35cf7582cfcea9c9b65e530ec41178ea063f131fcc7733608a9ba819404cb78b3ec0562735be62d97e1d769787b2212d4971a87b1b0)
 
 몰루엔진은 [openNAMU](https://github.com/openNAMU/openNAMU)를 바탕으로 합니다.
 
